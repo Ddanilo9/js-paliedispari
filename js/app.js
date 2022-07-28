@@ -41,6 +41,8 @@ let ilTuoNumero = document.getElementById('num');
 let numeroPc = 0;
 let iniziaAgiocare = document.getElementById('start');
 let somma = 0
+let pariDispari = document.querySelector('input[type="radio"]').value
+console.log(pariDispari)
 
 
 function isEven(num){
@@ -49,24 +51,27 @@ function isEven(num){
 
 
 iniziaAgiocare.addEventListener("click", function(){ 
-  
-    if (isNaN(ilTuoNumero.value) || ilTuoNumero.value > 5 || ilTuoNumero.value < 1) {
-        alert('Inserisci un numero da 1 a 5')
-      console.log('il tuo numero '+ (parseInt(ilTuoNumero.value)));
-    }
-    
+    if (pariDispari === 'Pari'){
+        console.log(pariDispari)
 
-    numeroPc = Math.floor(Math.random() * 5 + 1)
-    console.log('il numero del pc ' + (parseInt(numeroPc)));
+        if (isNaN(ilTuoNumero.value) || ilTuoNumero.value > 5 || ilTuoNumero.value < 1) {
+            alert('Inserisci un numero da 1 a 5')
+        console.log('il tuo numero '+ (parseInt(ilTuoNumero.value)));
+        }
+        
 
-    somma = (parseInt(ilTuoNumero.value)) + (parseInt(numeroPc));
-    console.log('la somma è ' + (parseInt(somma)));
+        numeroPc = Math.floor(Math.random() * 5 + 1)
+        console.log('il numero del pc ' + (parseInt(numeroPc)));
 
-    if (isEven(somma)) {
-        alert('hai vinto')
-    }   else {
-        alert('hai perso')
-    }
+        somma = (parseInt(ilTuoNumero.value)) + (parseInt(numeroPc));
+        console.log('la somma è ' + (parseInt(somma)));
+
+        if (isEven(somma)) {
+            alert('hai vinto')
+        }   else {
+            alert('hai perso')
+        }
+    }  
 })
 
 

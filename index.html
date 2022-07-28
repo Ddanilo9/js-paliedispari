@@ -8,10 +8,13 @@
 </head>
 <body>
     <h1>Gioco</h1>
-    <select name="pd" id="play">
-        <option value="Pari">Pari</option>
-        <option value="Dispari">Dispari</option>
-    </select>
+    <form>
+        <p>Seleziona pari o dispari</p>
+        <input type="radio" id="" name="pariDispari" value="Pari">
+        <label for="pari">PARI</label>
+        <input type="radio" id="" name="pariDispari" value="Dispari">
+        <label for="dispari">DISPARI</label><br>  
+      </form>
     <h3>il tuo numero</h3>
     <input id="num" type="text" placeholder="Inserisci numero da 1 a 5">
     <button id="start">Gioca</button>
